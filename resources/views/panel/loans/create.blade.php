@@ -14,7 +14,7 @@
                                 <label for="user" class="col-sm-2 col-form-label">Usuario</label>
                                 <div class="col-sm-10">
                                     <select id="user" name="user_id" class="form-control" required>
-                                        <option value="">-- Selecionar ---</option>
+                                        <option value="">-- Seleccionar ---</option>
                                         @foreach ($users as $user)
                                             <option value="{{$user->id}}">{{$user->name}}</option>
                                         @endforeach
@@ -25,7 +25,7 @@
                                 <label for="book" class="col-sm-2 col-form-label">Libro</label>
                                 <div class="col-sm-10">
                                     <select id="book" name="book_id" class="form-control" required>
-                                        <option value="">-- Selecionar ---</option>
+                                        <option value="">-- Seleccionar ---</option>
                                         @foreach ($books as $book)
                                             <option value="{{$book->id}}">{{$book->name}}</option>
                                         @endforeach

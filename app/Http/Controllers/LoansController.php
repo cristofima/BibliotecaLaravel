@@ -32,6 +32,9 @@ class LoansController extends Controller
             DB::beginTransaction();
 
             $book = Book::findOrFail($request->book_id);
+            if(!$book->available){
+                return back()->withErrors(['exception' => 'El libro "'.$book->name.'" ya se encuentra prestado']);
+            }
             $book->available = false;
             $book->save();
 
